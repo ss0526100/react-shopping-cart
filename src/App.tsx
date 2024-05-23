@@ -3,9 +3,9 @@ import './reset.css';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import ConfirmOrderPage from './page/ConfirmOrderPage/ConfirmOrderPage';
 import ENDPOINTS from './constants/endpoints';
 import OrderConfirmationPage from './page/OrderConfirmationPage/OrderConfrimationPage';
+import OrderLastPage from './page/OrderLastPage/OrderLastPage';
 import ShoppingCartPage from './page/ShoppingCartPage/ShoppingCartPage';
 import { Suspense } from 'react';
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     path: ENDPOINTS.confirmOrder,
     element: (
       <Suspense>
-        <ConfirmOrderPage />
+        <OrderLastPage />
       </Suspense>
     ),
   },
