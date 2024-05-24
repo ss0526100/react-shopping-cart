@@ -16,10 +16,14 @@ const router = createBrowserRouter([
   },
   {
     path: ENDPOINTS.orderConfirmation,
-    element: <OrderConfirmationPage />,
+    element: (
+      <Suspense>
+        <OrderConfirmationPage />
+      </Suspense>
+    ),
   },
   {
-    path: ENDPOINTS.confirmOrder,
+    path: ENDPOINTS.lastPage,
     element: (
       <Suspense>
         <OrderLastPage />
